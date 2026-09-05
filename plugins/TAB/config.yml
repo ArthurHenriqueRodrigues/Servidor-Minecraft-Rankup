@@ -1,0 +1,97 @@
+header-footer:
+  enabled: true
+  designs:
+    default:
+      display-condition: '%world%!=disabledworld'
+      header:
+      - '&8&m------------------------------'
+      - '&b&lRANKUP &7| &fPRISON 1.8.8'
+      - '&7Minas A-Z &8• &fBem-vindo, %player%'
+      - '&8&m------------------------------'
+      footer:
+      - '&7Online: &f%online% &8• &7Ping: &f%ping%ms'
+      - '&7Use &b/rankup &7para progredir'
+      - '&8&m------------------------------'
+tablist-name-formatting:
+  enabled: true
+scoreboard:
+  enabled: true
+  toggle-command: /scoreboard
+  remember-toggle-choice: true
+  scoreboards:
+    default:
+      title: '&b&lRANKUP'
+      lines:
+      - '&8&m----------------'
+      - '&fJogador: &b%player%'
+      - '&fGrupo: &b%group%'
+      - '&fCargo: &r%luckperms-prefix%'
+      - '&fProgressao: &7use /rankup'
+      - '&fOnline: &b%online%'
+      - '&8&m----------------'
+      - '&7play.rankup.local'
+playerlist-objective:
+  enabled: false
+  value: '%ping%'
+  fancy-value: '&7Ping: %ping%'
+  disable-condition: ''
+  title: TAB
+  render-type: INTEGER
+playerlist:
+  enabled: true
+  value: '%ping%'
+  fancy-value: '&7%ping%ms'
+  motd: false
+groups:
+  owner:
+    tabprefix: '&c&lOWNER &r'
+    tagprefix: '&c&lOWNER &r'
+  staff:
+    tabprefix: '&9&lSTAFF &r'
+    tagprefix: '&9&lSTAFF &r'
+  membro:
+    tabprefix: '&7[Membro] &r'
+    tagprefix: '&7[Membro] &r'
+  _DEFAULT_:
+    tabprefix: '&7[Membro] &r'
+    tagprefix: '&7[Membro] &r'
+prevent-spectator-effect:
+  enabled: false
+debug: false
+use-online-uuid-in-tablist: true
+permission-refresh-interval: 1000
+compensate-for-packetevents-bug: false
+assign-groups-by-permissions: false
+primary-group-finding-list:
+- Owner
+- Admin
+- Helper
+- default
+belowname-objective:
+  fancy-value-default: NPC
+  fancy-value: '&c%health%'
+  enabled: false
+placeholders:
+  register-tab-expansion: false
+global-playerlist:
+  update-latency: false
+  enabled: false
+config-version: 5
+components:
+  minimessage-support: true
+  disable-shadow-for-heads: true
+proxy-support:
+  channel-name-suffix: TAB
+  enabled: true
+bossbar:
+  enabled: false
+layout:
+  enabled: false
+mysql:
+  enabled: false
+per-world-playerlist:
+  enabled: false
+ping-spoof:
+  enabled: false
+scoreboard-teams:
+  enabled: true
