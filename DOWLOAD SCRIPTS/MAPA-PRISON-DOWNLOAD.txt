@@ -1,0 +1,29 @@
+MAPA PRISON
+
+Opcao encontrada em fonte legitima:
+Prison Map for Prison Owners (arquivo World.zip, Minecraft 1.7.4)
+Pagina oficial:
+https://www.curseforge.com/minecraft/worlds/prison-map-for-prison-owners
+Arquivos:
+https://www.curseforge.com/minecraft/worlds/prison-map-for-prison-owners/files/all
+
+Observacao: o mapa e de 1.7.4. O Spigot 1.8.8 normalmente consegue carregar mundos 1.7.x, mas o mapa nao inclui plugin de RankUp, economia, reset de minas ou permissoes.
+
+INSTALACAO
+
+1. Pare o servidor no console:
+   stop
+2. Abra a pagina oficial acima e baixe o arquivo World.zip.
+3. Coloque o ZIP em qualquer lugar do computador.
+4. Execute install-world.bat.
+5. Arraste o arquivo ZIP para a janela do instalador e pressione Enter.
+6. O instalador verifica level.dat, renomeia o world atual para world-backup-AAAAMMDD-HHMMSS e instala o novo mapa como world.
+7. Inicie com start-server.bat.
+8. Se o mapa nao agradar, pare o servidor, apague world e renomeie o backup desejado para world.
+
+TESTE
+
+Depois de iniciar, entre como Teiraki_ e execute:
+spawn
+
+O sistema RankUp ainda precisa de plugin proprio. O mapa e somente a construcao.

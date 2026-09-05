@@ -1,0 +1,32 @@
+# Tabela economica de referencia para EssentialsX worth.yml
+# Valor por unidade vendida com /sell
+currency: '$'
+starting-balance: 100
+sell:
+  coal_ore: 4
+  iron_ore: 12
+  gold_ore: 20
+  redstone_ore: 8
+  lapis_ore: 10
+  diamond_ore: 45
+  emerald_ore: 60
+  iron_block: 35
+  gold_block: 60
+  redstone_block: 25
+  diamond_block: 120
+  emerald_block: 180
+
+rankups:
+  A: 0
+  B: 5000
+  C: 15000
+  D: 40000
+  E: 100000
+  F: 250000
+  G: 600000
+
+rules:
+  - 'Nao adicione valor para stone/cobblestone em minas de RankUp.'
+  - 'A progressao deve exigir 15-30 minutos por rank no inicio.'
+  - 'Minas avancadas resetam a cada 15-20 minutos para limitar inflacao.'
+  - 'Teste /sell com Fortune e picaretas especiais antes de abrir a internet.'

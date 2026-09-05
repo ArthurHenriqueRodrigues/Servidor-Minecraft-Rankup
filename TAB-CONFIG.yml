@@ -1,0 +1,60 @@
+# Copie este arquivo para plugins/TAB/config.yml apos o primeiro inicio do TAB.
+header-footer:
+  enabled: true
+  header:
+    - '&8&m------------------------------'
+    - '&b&lRANKUP &7| &fPRISON 1.8.8'
+    - '&7Minas A-Z &8• &fBem-vindo, %player%'
+    - '&8&m------------------------------'
+  footer:
+    - '&7Online: &f%online% &8• &7Ping: &f%ping%ms'
+    - '&7Use &b/rankup &7para progredir'
+    - '&8&m------------------------------'
+
+tablist-name-formatting:
+  enabled: true
+  anti-override: true
+
+scoreboard:
+  enabled: true
+  toggle-command: /scoreboard
+  remember-toggle-choice: true
+  scoreboards:
+    default:
+      title: '&b&lRANKUP'
+      lines:
+        - '&8&m----------------'
+        - '&fJogador: &b%player%'
+        - '&fGrupo: &b%group%'
+        - '&fCargo: &r%luckperms-prefix%'
+        - '&fProgressao: &7use /rankup'
+        - '&fOnline: &b%online%'
+        - '&8&m----------------'
+        - '&7play.rankup.local'
+
+playerlist-objective:
+  enabled: false
+  value: '%ping%'
+  fancy-value: '&7Ping: %ping%'
+  disable-condition: ''
+
+playerlist:
+  enabled: true
+  value: '%ping%'
+  fancy-value: '&7%ping%ms'
+  motd: false
+
+# O prefixo e definido pelo meta.prefix do LuckPerms.
+groups:
+  owner:
+    tabprefix: '&c&lOWNER &r'
+    tagprefix: '&c&lOWNER &r'
+  staff:
+    tabprefix: '&9&lSTAFF &r'
+    tagprefix: '&9&lSTAFF &r'
+  membro:
+    tabprefix: '&7[Membro] &r'
+    tagprefix: '&7[Membro] &r'
+  _DEFAULT_:
+    tabprefix: '&7[Membro] &r'
+    tagprefix: '&7[Membro] &r'

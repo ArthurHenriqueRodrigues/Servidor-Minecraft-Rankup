@@ -1,0 +1,101 @@
+MINAS PRISON COM MINERESETLITE 0.4.8
+
+O servidor deve estar ligado e voce deve estar como Owner/OP para executar esta configuracao.
+O MineResetLite permite selecionar sem WorldEdit usando os blocos que voce esta olhando.
+
+1. Instale e carregue o plugin:
+   stop
+   install-mines.bat
+   start-server.bat
+
+2. Dê permissao ao Owner no console:
+   lp group owner permission set mineresetlite.mine.create true
+   lp group owner permission set mineresetlite.mine.composition true
+   lp group owner permission set mineresetlite.mine.reset true
+   lp group owner permission set mineresetlite.mine.flag true
+   lp group owner permission set mineresetlite.mine.tp true
+   lp group owner permission set mineresetlite.mine.settp true
+   lp group staff permission set mineresetlite.mine.info true
+   lp group staff permission set mineresetlite.mine.list true
+
+3. Para cada mina, marque dois cantos opostos:
+   - fique olhando para um bloco do primeiro canto e execute no chat: /mrl p1
+   - olhe para o bloco do canto oposto e execute: /mrl p2
+   - execute: /mrl create mina_a
+
+   O comando /mrl p1 e p2 tambem pode usar -feet para marcar onde voce esta.
+
+4. Defina a composicao. Os percentuais devem somar 100:
+
+MINA COAL (mina_coal)
+/mrl set mina_coal stone 70%
+/mrl set mina_coal coal_ore 25%
+/mrl set mina_coal iron_ore 5%
+/mrl flag mina_coal resetDelay 10
+/mrl flag mina_coal resetWarnings 5,1
+
+MINA B
+/mrl set mina_b stone 60%
+/mrl set mina_b coal_ore 20%
+/mrl set mina_b iron_ore 15%
+/mrl set mina_b gold_ore 5%
+/mrl flag mina_b resetDelay 10
+/mrl flag mina_b resetWarnings 5,1
+
+MINA C
+/mrl set mina_c stone 50%
+/mrl set mina_c iron_ore 25%
+/mrl set mina_c gold_ore 15%
+/mrl set mina_c redstone_ore 10%
+/mrl flag mina_c resetDelay 12
+/mrl flag mina_c resetWarnings 5,1
+
+MINA D
+/mrl set mina_d stone 40%
+/mrl set mina_d gold_ore 25%
+/mrl set mina_d redstone_ore 20%
+/mrl set mina_d lapis_ore 15%
+/mrl flag mina_d resetDelay 12
+/mrl flag mina_d resetWarnings 5,1
+
+MINA E
+/mrl set mina_e iron_block 30%
+/mrl set mina_e gold_ore 25%
+/mrl set mina_e redstone_ore 25%
+/mrl set mina_e diamond_ore 20%
+/mrl flag mina_e resetDelay 15
+/mrl flag mina_e resetWarnings 5,1
+
+MINA F
+/mrl set mina_f gold_block 30%
+/mrl set mina_f redstone_block 25%
+/mrl set mina_f diamond_ore 25%
+/mrl set mina_f emerald_ore 20%
+/mrl flag mina_f resetDelay 15
+/mrl flag mina_f resetWarnings 5,1
+
+MINA G
+/mrl set mina_g diamond_block 35%
+/mrl set mina_g emerald_ore 35%
+/mrl set mina_g emerald_block 30%
+/mrl flag mina_g resetDelay 20
+/mrl flag mina_g resetWarnings 10,5,1
+
+5. Depois de configurar cada mina:
+   /mrl reset mina_a
+   /mrl reset mina_b
+   /mrl reset mina_c
+   /mrl reset mina_d
+   /mrl reset mina_e
+   /mrl reset mina_f
+   /mrl reset mina_g
+
+6. Defina o ponto de teleporte no topo de cada mina:
+   fique no ponto seguro e execute /mrl settp mina_a
+   repita para as outras minas.
+
+IMPORTANTE
+- MineResetLite cria e reseta as minas, mas nao protege construcao.
+- Nao de permissao de criacao para membros.
+- WorldGuard deve ser instalado corretamente antes de usar /rg define.
+- Use /mrl list e /mrl info mina_a para testar.

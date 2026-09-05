@@ -1,0 +1,46 @@
+# Minecraft runtime data
+world/
+world_nether/
+world_the_end/
+world-backup-*/
+logs/
+crash-reports/
+cache/
+usercache.json
+banned-ips.json
+banned-players.json
+ops.json
+whitelist.json
+
+# Generated plugin data and local databases
+plugins/*/
+plugins/*.db
+plugins/*.sqlite
+plugins/*.sqlite3
+plugins/*.h2.db
+plugins-disabled/
+
+# Binary downloads and build output
+*.jar
+*.zip
+BuildTools.log.txt
+BuildData/
+Bukkit/
+CraftBukkit/
+Spigot/
+work/
+apache-maven-*/
+PortableGit-*/
+
+# Local/editor files
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
+
+# Never publish local secrets or personal server state
+rcon.password
+.env
+.env.*
+eula.txt

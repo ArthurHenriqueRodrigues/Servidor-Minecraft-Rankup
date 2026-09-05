@@ -1,0 +1,65 @@
+CONFIGURACAO INICIAL DO MUNDO PRISON/RANKUP
+
+O mundo atual foi preservado como world. Nenhum mapa externo foi instalado porque as fontes abertas consultadas nao forneceram um download 1.8 verificavel.
+
+Depois de corrigir os JARs completos do WorldEdit e WorldGuard, crie as minas com estas regioes:
+
+spawn       - ponto de entrada, sem PvP e sem construcao
+mina_a      - Stone 70%, Coal Ore 25%, Iron Ore 5%
+mina_b      - Stone 60%, Coal Ore 20%, Iron Ore 15%, Gold Ore 5%
+mina_c      - Stone 50%, Iron Ore 25%, Gold Ore 15%, Redstone Ore 10%
+mina_d      - Stone 40%, Gold Ore 25%, Redstone Ore 20%, Lapis Ore 15%
+mina_e      - Iron Block 30%, Gold Ore 25%, Redstone Ore 25%, Diamond Ore 20%
+mina_f      - Gold Block 30%, Redstone Block 25%, Diamond Ore 25%, Emerald Ore 20%
+mina_g      - Diamond Block 35%, Emerald Ore 35%, Emerald Block 30%
+
+Comandos de estrutura, depois do WorldEdit/WorldGuard funcionar:
+
+rg define spawn
+rg flag spawn build deny
+rg flag spawn pvp deny
+rg flag spawn mob-spawning deny
+
+rg define mina_a
+rg flag mina_a build deny
+rg flag mina_a pvp deny
+rg flag mina_a mob-spawning deny
+rg flag mina_a entry allow
+
+Repita as quatro linhas da mina_a para mina_b ate mina_g.
+
+RANKS SUGERIDOS
+
+rank-a: inicial, acesso a mina_a
+rank-b: 5000, acesso a mina_b
+rank-c: 15000, acesso a mina_c
+rank-d: 40000, acesso a mina_d
+rank-e: 100000, acesso a mina_e
+rank-f: 250000, acesso a mina_f
+rank-g: 600000, acesso a mina_g
+
+LuckPerms:
+lp creategroup rank-a
+lp creategroup rank-b
+lp creategroup rank-c
+lp creategroup rank-d
+lp creategroup rank-e
+lp creategroup rank-f
+lp creategroup rank-g
+lp group rank-b parent set rank-a
+lp group rank-c parent set rank-b
+lp group rank-d parent set rank-c
+lp group rank-e parent set rank-d
+lp group rank-f parent set rank-e
+lp group rank-g parent set rank-f
+lp group rank-a permission set rankup.mine.a true
+lp group rank-b permission set rankup.mine.b true
+lp group rank-c permission set rankup.mine.c true
+lp group rank-d permission set rankup.mine.d true
+lp group rank-e permission set rankup.mine.e true
+lp group rank-f permission set rankup.mine.f true
+lp group rank-g permission set rankup.mine.g true
+
+IMPORTANTE
+
+Esses grupos e permissoes criam a base, mas o comando /rankup e o reset automatico das minas ainda precisam de um plugin especifico de RankUp/MineReset. Nao existe comando /rankup nativo do Spigot ou Essentials.
