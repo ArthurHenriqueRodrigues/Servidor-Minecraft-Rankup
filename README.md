@@ -38,30 +38,6 @@ Este repositorio guarda configuracoes, scripts e documentacao. Mundos, logs, JAR
 - `CRIAR-MINAS.txt`: comandos MineResetLite.
 - `PROTEGER-AREAS-WORLDGUARD.txt`: comandos de protecao.
 
-## GitHub
-
-Crie um repositorio vazio no GitHub e use o script `github-push.bat`, ou execute manualmente:
-
-```bat
-git init
-git add .
-git status
-git commit -m "Configura servidor RankUp Prison 1.8.8"
-git branch -M main
-git remote add origin https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
-git push -u origin main
-```
-
-O GitHub pedira autenticacao. Para HTTPS, use o GitHub CLI (`gh auth login`) ou um Personal Access Token, nunca uma senha escrita em arquivos.
-
-## Atualizar depois
-
-```bat
-git add .
-git commit -m "Atualiza configuracao do servidor"
-git push
-```
-
 ## Restaurar um mundo
 
 Mundos nao ficam neste repositorio. Pare o servidor, faca backup da pasta `world` atual, extraia o mapa desejado com o nome `world` e inicie novamente.
