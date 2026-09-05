@@ -1,0 +1,47 @@
+# Tabela de progressao do RankUp
+# O comando /rankup depende de um plugin de RankUp; estes valores sao a tabela-base.
+
+ranks:
+  rank-a:
+    display: '&7[A]'
+    cost: 0
+    mine: mina_a
+    blocks: 'STONE:70, COAL_ORE:25, IRON_ORE:5'
+  rank-b:
+    display: '&f[B]'
+    cost: 5000
+    mine: mina_b
+    blocks: 'STONE:60, COAL_ORE:20, IRON_ORE:15, GOLD_ORE:5'
+  rank-c:
+    display: '&e[C]'
+    cost: 15000
+    mine: mina_c
+    blocks: 'STONE:50, IRON_ORE:25, GOLD_ORE:15, REDSTONE_ORE:10'
+  rank-d:
+    display: '&6[D]'
+    cost: 40000
+    mine: mina_d
+    blocks: 'STONE:40, GOLD_ORE:25, REDSTONE_ORE:20, LAPIS_ORE:15'
+  rank-e:
+    display: '&c[E]'
+    cost: 100000
+    mine: mina_e
+    blocks: 'IRON_BLOCK:30, GOLD_ORE:25, REDSTONE_ORE:25, DIAMOND_ORE:20'
+  rank-f:
+    display: '&b[F]'
+    cost: 250000
+    mine: mina_f
+    blocks: 'GOLD_BLOCK:30, REDSTONE_BLOCK:25, DIAMOND_ORE:25, EMERALD_ORE:20'
+  rank-g:
+    display: '&a[G]'
+    cost: 600000
+    mine: mina_g
+    blocks: 'DIAMOND_BLOCK:35, EMERALD_ORE:35, EMERALD_BLOCK:30'
+
+roles:
+  membro:
+    prefix: '&7[Membro] '
+  staff:
+    prefix: '&9[Staff] '
+  owner:
+    prefix: '&c[Owner] '

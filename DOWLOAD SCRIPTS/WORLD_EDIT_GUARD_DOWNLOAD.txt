@@ -1,0 +1,32 @@
+DOWNLOAD OFICIAL
+
+WorldEdit Bukkit:
+https://www.curseforge.com/minecraft/bukkit-plugins/worldedit/files/all
+
+WorldGuard Bukkit:
+https://www.curseforge.com/minecraft/bukkit-plugins/worldguard/files/all
+
+Para Spigot 1.8.8, escolha:
+- WorldEdit 6.x para Bukkit 1.8
+- WorldGuard 6.1.2 ou 6.2 para Minecraft 1.8
+
+NAO use os arquivos worldedit-bukkit-6.1.5.jar ou worldguard-legacy-6.1.2.jar que estao em plugins-disabled: eram artefatos Maven incompletos.
+
+INSTALACAO
+
+1. No console do servidor:
+   stop
+2. Baixe os dois JARs pelas paginas acima.
+3. Execute:
+   install-worldedit-worldguard.bat
+4. Informe os caminhos dos dois JARs quando solicitado.
+5. O instalador valida plugin.yml e classes essenciais antes de instalar.
+6. Inicie:
+   start-server.bat
+7. No jogo, teste:
+   //wand
+   /rg list
+   /version WorldEdit
+   /version WorldGuard
+
+Se o instalador rejeitar um arquivo, ele nao e o pacote Bukkit completo ou nao e da linha 6.x.

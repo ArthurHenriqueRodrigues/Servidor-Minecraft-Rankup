@@ -1,0 +1,81 @@
+PROTECAO WORLDGUARD 6.2.1
+
+WorldEdit e WorldGuard estao instalados e carregando corretamente.
+Execute estes comandos no console do servidor, sem a barra inicial, ou no jogo como Owner/OP.
+
+MINA EXISTENTE: mina_coal
+Limites registrados pelo MineResetLite:
+world: X 102..120, Y 1..67, Z -152..-138
+
+Protecao da mina existente, usando a selecao do WorldEdit:
+
+//pos1 102,1,-152
+//pos2 120,67,-138
+/rg define mina_coal
+/rg flag mina_coal build deny
+/rg flag mina_coal pvp deny
+/rg flag mina_coal mob-spawning deny
+/rg flag mina_coal creeper-explosion deny
+/rg flag mina_coal other-explosion deny
+/rg flag mina_coal fire-spread deny
+/rg flag mina_coal lava-fire deny
+/rg flag mina_coal tnt deny
+/rg flag mina_coal entry allow
+/rg flag mina_coal greeting &aMina Coal
+/rg flag mina_coal farewell &7Saindo da Mina Coal
+
+IMPORTANTE: MineResetLite ainda pode alterar blocos dentro da regiao durante o reset. Nao use build deny em uma mina se o plugin nao conseguir resetar; se o reset falhar, remova temporariamente a flag build deny.
+
+SPAWN
+
+No jogo, fique no canto inferior do spawn e execute:
+//pos1
+Depois fique no canto superior oposto e execute:
+//pos2
+Depois execute:
+/rg define spawn
+/rg flag spawn build deny
+/rg flag spawn pvp deny
+/rg flag spawn mob-spawning deny
+/rg flag spawn creeper-explosion deny
+/rg flag spawn other-explosion deny
+/rg flag spawn fire-spread deny
+/rg flag spawn lava-fire deny
+/rg flag spawn tnt deny
+/rg flag spawn greeting &bBem-vindo ao RankUp Prison
+/rg flag spawn farewell &7Ate logo
+
+PERMISSOES STAFF
+
+lp group staff permission set worldguard.region.list true
+lp group staff permission set worldguard.region.info true
+lp group staff permission set worldedit.selection.pos true
+lp group owner permission set worldguard.* true
+lp group owner permission set worldedit.* true
+
+FUTURAS MINAS
+
+Para cada mina, selecione os dois cantos com //pos1 e //pos2 e use:
+/rg define mina_b
+/rg flag mina_b build deny
+/rg flag mina_b pvp deny
+/rg flag mina_b mob-spawning deny
+/rg flag mina_b creeper-explosion deny
+/rg flag mina_b other-explosion deny
+/rg flag mina_b fire-spread deny
+/rg flag mina_b lava-fire deny
+/rg flag mina_b tnt deny
+
+Troque mina_b por mina_c, mina_d, mina_e, mina_f e mina_g.
+
+VERIFICACAO
+
+/rg list
+/rg info spawn
+/rg info mina_coal
+//sel
+
+Se uma regiao estiver errada:
+/rg remove NOME_DA_REGIAO
+
+NAO use /rg define sem antes selecionar a area correta. O WorldGuard salva as regioes em plugins/WorldGuard/worlds/world/regions.yml.

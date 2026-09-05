@@ -1,0 +1,51 @@
+CONFIGURACAO DE CARGOS - LUCKPERMS
+
+O servidor precisa estar ligado. Execute estes comandos no console, sem a barra inicial.
+Substitua SEU_NICK pelo seu nome exato no Minecraft.
+
+lp creategroup membro
+lp creategroup staff
+lp creategroup owner
+lp group staff parent set membro
+lp group owner parent set staff
+lp setdefaultgroup membro
+
+lp group membro meta setprefix 10 "&7[Membro] "
+lp group staff meta setprefix 20 "&9[Staff] "
+lp group owner meta setprefix 30 "&c[Owner] "
+
+lp group membro permission set essentials.help true
+lp group membro permission set essentials.spawn true
+lp group membro permission set essentials.home true
+lp group membro permission set essentials.sethome true
+lp group membro permission set essentials.tpa true
+lp group membro permission set essentials.tpaccept true
+lp group membro permission set essentials.balance true
+lp group membro permission set essentials.pay true
+lp group membro permission set essentials.sell true
+lp group membro permission set essentials.msg true
+lp group membro permission set essentials.r true
+
+lp group staff permission set essentials.kick true
+lp group staff permission set essentials.mute true
+lp group staff permission set essentials.tempmute true
+lp group staff permission set essentials.tp true
+lp group staff permission set essentials.invsee true
+lp group staff permission set essentials.vanish true
+lp group staff permission set worldguard.region.list true
+lp group staff permission set worldguard.region.info true
+
+lp group owner permission set * true
+lp user Teiraki_ parent set owner
+
+Para outro jogador:
+lp user NOME parent set membro
+lp user NOME parent set staff
+
+Verificacao:
+lp user Teiraki_ info
+lp group membro info
+lp group staff info
+lp group owner info
+
+Nao use /op para membros ou staff. Mantenha o OP apenas para o Owner durante a montagem.
