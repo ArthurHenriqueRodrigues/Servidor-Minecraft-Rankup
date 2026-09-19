@@ -1,0 +1,92 @@
+# ==============================================================================
+#  __  __      ____       _  __        __                
+#  \ \/ /     / ___|  ___| |_\ \      / /_ _ _ __ _ __  ___ 
+#   \  /_____ \___ \ / _ \ __|\ \ /\ / / _` | '__| '_ \/ __|
+#   /  \_____|____) |  __/ |_  \ V  V / (_| | |  | |_) \__ \
+#  /_/\_\    |____/ \___|\__|  \_/\_/ \__,_|_|  | .__/|___/
+#                                                |_|         
+# ==============================================================================
+# X-SetWarps Arquivo de Mensagens v1.3 (Português)
+# Suporta códigos de cores (&a, &b, etc.) e cores hex (&#RRGGBB)
+
+# Mensagens Gerais
+no-permission: "%prefix%&cVocê não tem permissão para usar este comando."
+only-players: "%prefix%&cEste comando só puede ser usado por jogadores."
+usage-setwarp: "%prefix%&cUso: /setwarp <nome> [identificador] [descrição]"
+usage-warp: "%prefix%&cUso: /warp <nome>"
+usage-delwarp: "%prefix%&cUso: /delwarp <nome>"
+usage-warpinfo: "%prefix%&cUso: /warpinfo <nome>"
+
+# Mensagens de Warp
+warp-set: "%prefix%&aWarp '&b%warp%&a' criado com sucesso!"
+warp-not-found: "%prefix%&cO warp '&b%warp%&c' não existe."
+warp-teleport: "%prefix%&aTeletransportado para o warp: &b%warp%"
+warp-deleted: "%prefix%&aO warp '&b%warp%&a' foi removido."
+world-not-loaded: "%prefix%&cErro: Mundo '&b%world%&c' não carregado."
+reload-success: "%prefix%&aConfiguração e mensagens recarregadas!"
+
+# Mensagens de Lista de Warps
+warp-cooldown: "%prefix%&cVocê deve esperar &e%seconds%s &cantes de usar &b%warp%&c novamente."
+warp-delay: "%prefix%&eTeletransportando para &b%warp% &eem &a%seconds% &esegundos... Não se mova."
+warp-delay-cancelled: "%prefix%&cTeletransporte cancelado por movimento."
+warps-limit-reached: "%prefix%&cLimite máximo de warps atingido (&e%limit%&c)."
+warps-list-empty: "%prefix%&cNão há warps registrados."
+warps-list-header: "&9&l--- Warps (&b%count%&9) ---"
+warps-list-entry: "&7- &b%warp% &8(&7Mundo: &f%world%&8) &7- &f%desc%"
+
+# Mensagens de WarpInfo
+warpinfo-header: "&9&l--- Info do Warp: &b%warp% ---"
+warpinfo-desc: "&7Descrição: &f%desc%"
+warpinfo-world: "&7Mundo: &f%world%"
+warpinfo-coords: "&7Coordenadas: &f%coords%"
+warpinfo-creator: "&7Criado por: &f%creator%"
+warpinfo-created: "&7Data: &f%date%"
+
+# Mensagens do Verificador de Atualizações
+update-check: "%prefix%&eProcurando atualizações..."
+update-available: "%prefix%&eNova versão disponível! &7(&c%current%&7 -> &a%latest%&7)"
+update-download: "&eDownload: &b%url%"
+update-current: "%prefix%&aVocê tem a versão mais recente!"
+update-error: "%prefix%&cErro ao procurar atualizações."
+version-info: "%prefix%&bX-SetWarps &av%version%"
+
+# Mensagens de Idioma
+language-changed: "%prefix%&aIdioma alterado para: &b%language%"
+language-not-found: "%prefix%&cIdioma não encontrado. Disponíveis: %list%"
+language-list: "&aDisponíveis: &f%list%"
+
+# Mensagens de Ajuda
+help-header: "&9&l--- Ajuda X-SetWarps ---"
+help-reload: "&b/xsw reload &f- Recarregar config"
+help-update: "&b/xsw update &f- Verificar atualizações"
+help-version: "&b/xsw version &f- Mostrar versão"
+help-locate: "&b/xsw locate <idioma> &f- Alterar idioma"
+help-setwarp: "&b/setwarp <nome> [id] [desc] &f- Criar warp"
+help-warp: "&b/warp <nome> &f- Teletransportar para warp"
+help-delwarp: "&b/delwarp <nome> &f- Excluir warp"
+help-warps: "&b/warps &f- Abrir menu de warps"
+help-warpinfo: "&b/warpinfo <nome> &f- Info do warp"
+
+# Export/Import Messages
+usage-export: "%prefix%&cUso: /xsetwarp export <arquivo> [identificador]"
+usage-import: "%prefix%&cUso: /xsetwarp import <arquivo|essentials|cmi|all>"
+export-success: "%prefix%&aExportados &e%count% &awarps para &b%file%"
+export-failed: "%prefix%&cFalha ao exportar warps."
+import-success: "%prefix%&aImportados &e%count% &awarps com sucesso!"
+import-file-not-found: "%prefix%&cArquivo nao encontrado: &b%file%"
+import-plugin-not-found: "%prefix%&cO plugin %plugin% nao esta instalado."
+import-plugin-success: "%prefix%&aImportados &e%count% &awarps de %plugin%."
+
+warp-global-cooldown: "%prefix%&cVoce deve esperar &e%seconds%s &cantes de usar qualquer warp."
+
+usage-setwarpcooldown: "%prefix%&cUso: /xsetwarp setwarpcooldown <warp> <segundos|default>"
+setwarpcooldown-set: "%prefix%&aCooldown do warp '&b%warp%&a' definido para &e%seconds%s."
+setwarpcooldown-reset: "%prefix%&aCooldown do warp '&b%warp%&a' restaurado ao valor global."
+setwarpcooldown-invalid: "%prefix%&cValor de cooldown invalido. Use um numero >= 0 ou 'default'."
+
+help-export: "&b/xsw export <arquivo> [id] &f- Exportar warps"
+help-import: "&b/xsw import <arquivo|essentials|cmi|all> &f- Importar warps"
+help-setwarpcooldown: "&b/xsw setwarpcooldown <warp> <s> &f- Cooldown por warp"
+
+import-all-no-plugins: "%prefix%&cNenhum plugin de warps compativel encontrado."
+import-all-result: "%prefix%&aDe %plugin%: importados &e%count% &awarps."

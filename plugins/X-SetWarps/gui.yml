@@ -1,0 +1,91 @@
+# ==============================================================================
+#  __  __      ____       _  __        __                
+#  \ \/ /     / ___|  ___| |_\ \      / /_ _ _ __ _ __  ___ 
+#   \  /_____ \___ \ / _ \ __|\ \ /\ / / _` | '__| '_ \/ __|
+#   /  \_____|____) |  __/ |_  \ V  V / (_| | |  | |_) \__ \
+#  /_/\_\    |____/ \___|\__|  \_/\_/ \__,_|_|  | .__/|___/
+#                                                |_|         
+# ==============================================================================
+# X-SetWarps GUI Configuration
+# ==============================================================================
+
+# GUI General Settings
+gui:
+  enabled: true
+  title: "&8Warps"
+  rows: 4
+  # Use player heads (creator's skull) as icons for dynamic warps?
+  # When true, ENDER_PEARL is replaced by the creator's PLAYER_HEAD.
+  # Falls back to ENDER_PEARL if the creator name is "unknown".
+  use-player-heads: false
+
+# Filler Settings
+filler:
+  material: "BLACK_STAINED_GLASS_PANE"
+  name: " "
+
+# ==============================================================================
+# BUTTONS
+# ==============================================================================
+
+buttons:
+  close:
+    slot: 31
+    material: "PLAYER_HEAD"
+    skull-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2VkMWFiYTczZjYzOWY0YmM0MmJkNDgxOTZjNzE1MTk3YmUyNzEyYzNiOTYyYzk3ZWJmOWU5ZWQ4ZWZhMDI1In19fQ=="
+    name: "&fClose"
+    lore:
+      - "&7Click to close this menu"
+
+# Navigation Buttons
+navigation:
+  prev-page:
+    slot: 27
+  next-page:
+    slot: 35
+
+# ==============================================================================
+# WARP ITEMS
+# ==============================================================================
+
+warp-items:
+  # Using HEAD material with skull-texture (base64)
+  spawn_warp:
+    warp: "spawn"
+    slot: 10
+    material: "HEAD"
+    skull-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODcyN2EyNmY4N2RhZDYyMzE0OThiN2RmZmNmZjZjMjAyYjFhODRjZTliYjlhZTRiNGVjMmRmMWViZDVjODg4YSJ9fX0="
+    name: "&bSpawn"
+    lore:
+      - "&7Click to teleport!"
+
+  # Using HEAD material with player name
+  hub_warp:
+    warp: "hub"
+    slot: 11
+    material: "HEAD"
+    skull-player: "Notch"
+    name: "&bHub"
+    lore:
+      - "&7Click to teleport!"
+
+  # Using custom material (diamond, emerald, etc)
+  shop_warp:
+    warp: "shop"
+    slot: 12
+    material: "EMERALD"
+    name: "&aShop"
+    lore:
+      - "&7Click to teleport!"
+
+# ==============================================================================
+# PAGE INFO
+# ==============================================================================
+
+page-info:
+  slot: 31
+  enabled: false
+  material: "PAPER"
+  name: "&7Warps: &e%count%"
+  lore:
+    - "&7Click to view warp info"

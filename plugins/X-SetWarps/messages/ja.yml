@@ -1,0 +1,93 @@
+# ==============================================================================
+#  __  __      ____       _  __        __                
+#  \ \/ /     / ___|  ___| |_\ \      / /_ _ _ __ _ __  ___ 
+#   \  /_____ \___ \ / _ \ __|\ \ /\ / / _` | '__| '_ \/ __|
+#   /  \_____|____) |  __/ |_  \ V  V / (_| | |  | |_) \__ \
+#  /_/\_\    |____/ \___|\__|  \_/\_/ \__,_|_|  | .__/|___/
+#                                                |_|         
+# ==============================================================================
+# X-SetWarps Messages (Japanese)
+
+# General Messages
+prefix: "&8[&bX-SetWarps&8] &7"
+no-permission: "%prefix%&c権限がありません。"
+only-players: "%prefix%&cプレイヤーのみ使用可能。"
+usage-setwarp: "%prefix%&c使用法: /setwarp <名前> [識別子] [説明]"
+usage-warp: "%prefix%&c使用法: /warp <名前>"
+usage-delwarp: "%prefix%&c使用法: /delwarp <名前>"
+usage-warpinfo: "%prefix%&c使用法: /warpinfo <名前>"
+
+# Warp Messages
+warp-set: "%prefix%&aワープ '&b%warp%&a' が作成されました!"
+warp-not-found: "%prefix%&cワープ '&b%warp%&c' は存在しません。"
+warp-teleport: "%prefix%&aワープ &b%warp% &aにテレポートしました。"
+warp-deleted: "%prefix%&aワープ '&b%warp%&a' を削除しました。"
+world-not-loaded: "%prefix%&cエラー: ワールド '&b%world%&c' がありません。"
+reload-success: "%prefix%&a設定を再読み込みしました!"
+
+# Warp List Messages
+warp-cooldown: "%prefix%&c&e%seconds%秒 &c後に再使用可能。"
+warp-delay: "%prefix%&e&b%warp% &eに&a%seconds%&e秒後にテレポート..."
+warp-delay-cancelled: "%prefix%&c移動によりキャンセル。"
+warps-limit-reached: "%prefix%&c上限到達 (&e%limit%&c)。"
+warps-list-empty: "%prefix%&cワープがありません。"
+warps-list-header: "&9&l--- ワープリスト (&b%count%&9) ---"
+warps-list-entry: "&7- &b%warp% &8(&7ワールド: &f%world%&8) &7- &f%desc%"
+
+# WarpInfo Messages
+warpinfo-header: "&9&l--- ワープ情報: &b%warp% ---"
+warpinfo-desc: "&7説明: &f%desc%"
+warpinfo-world: "&7ワールド: &f%world%"
+warpinfo-coords: "&7座標: &f%coords%"
+warpinfo-creator: "&7作成者: &f%creator%"
+warpinfo-created: "&7日付: &f%date%"
+
+# Update Checker Messages
+update-check: "%prefix%&eアップデート確認..."
+update-available: "%prefix%&e新バージョン! &7(&c%current%&7 -> &a%latest%&7)"
+update-download: "%prefix%&eダウンロード: &b%url%"
+update-current: "%prefix%&a最新バージョン!"
+update-error: "%prefix%&cエラー発生。"
+version-info: "%prefix%&bバージョン: &a%version%"
+
+# Language Messages
+language-changed: "%prefix%&a言語を &b%language% &aに変更!"
+language-not-found: "%prefix%&c言語が見つかりません。選択: %list%"
+language-list: "&a利用可能: &f%list%"
+
+# Help Messages
+help-header: "&9&l--- ヘルプ ---"
+help-reload: "&b/xsw reload &f- 再読み込み"
+help-update: "&b/xsw update &f- アップデート確認"
+help-version: "&b/xsw version &f- バージョン"
+help-locate: "&b/xsw locate <言語> &f- 言語変更"
+help-gui: "&b/xsw -gui &f- GUIを開く"
+help-setwarp: "&b/setwarp <名前> [id] [desc] &f- 作成"
+help-warp: "&b/warp <名前> &f- テレポート"
+help-delwarp: "&b/delwarp <名前> &f- 削除"
+help-warps: "&b/warps &f- リスト"
+help-warpinfo: "&b/warpinfo <名前> &f- 情報"
+
+# Export/Import
+usage-export: "%prefix%&c使用法: /xsetwarp export <ファイル> [識別子]"
+usage-import: "%prefix%&c使用法: /xsetwarp import <file|essentials|cmi|all>"
+export-success: "%prefix%&a&e%count% &aワープを &b%file% &aにエクスポートしました"
+export-failed: "%prefix%&cワープのエクスポートに失敗しました"
+import-success: "%prefix%&a&e%count% &aワープをインポートしました！"
+import-file-not-found: "%prefix%&cファイルが見つかりません: &b%file%"
+import-plugin-not-found: "%prefix%&c%plugin%プラグインがインストールされていません"
+import-plugin-success: "%prefix%&a%plugin%から&e%count% &aワープをインポートしました"
+
+warp-global-cooldown: "%prefix%&c&e%seconds%秒 &c待ってからワープを使用してください"
+
+usage-setwarpcooldown: "%prefix%&c使用法: /xsetwarp setwarpcooldown <ワープ> <秒数|default>"
+setwarpcooldown-set: "%prefix%&aワープ '&b%warp%&a' のクールダウンを &e%seconds%秒 &aに設定しました"
+setwarpcooldown-reset: "%prefix%&aワープ '&b%warp%&a' のクールダウンをデフォルトに戻しました"
+setwarpcooldown-invalid: "%prefix%&c無効な値です。0以上の数字または'default'を使用してください"
+
+help-export: "&b/xsw export <file> [id] &f- エクスポート"
+help-import: "&b/xsw import <file|essentials|cmi|all> &f- インポート"
+help-setwarpcooldown: "&b/xsw setwarpcooldown <warp> <s> &f- ワープ毎のクールダウン"
+
+import-all-no-plugins: "%prefix%&c対応するワーププラグインが見つかりません"
+import-all-result: "%prefix%&a%plugin%から: &e%count% &aワープをインポートしました"

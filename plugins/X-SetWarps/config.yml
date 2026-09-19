@@ -1,0 +1,188 @@
+#
+#  __   __      _____ _                 _
+#  \ \ / /     / ____| |               | |
+#   \ V /_____| |    | | ___  __ _ _ __| | __ _  __ _
+#    > <______| |    | |/ _ \/ _` | '__| |/ _` |/ _` |
+#   / . \     | |____| |  __/ (_| | |  | | (_| | (_| |
+#  /_/ \_\     \_____|_|\___|\__,_|_|  |_|\__,_|\__, |
+#                                               __/ |
+#                                              |___/
+# ======================================================== #
+#    X-SetWarps | Advanced Warp System Plugin for Minecraft    #
+#    Author: Fabian | Web: https://xproyects.qzz.io            #
+#    Discord: http://discord.xproyects.qzz.io/                 #
+# ======================================================== #
+#
+# Features:
+#   - Create, delete and manage warps with permissions per warp
+#   - GUI menu for warp selection with customizable items
+#   - Per-warp and global cooldown system
+#   - Teleport delay with movement cancellation
+#   - Teleport effects (sounds, particles) on warp
+#   - Per-warp descriptions shown in GUI and /warpinfo
+#   - PlaceholderAPI expansion with warp-related placeholders
+#   - WorldEdit schematic support for 1.8.8
+#
+# Supported versions: 1.13 - 1.21+ (Paper, Spigot, Folia, Purpur)
+# Compatibility library: XSeries (cross-version materials & sounds)
+
+# ------------------------------------------------------------------------------
+# LANGUAGE
+# The plugin loads messages from /plugins/X-SetWarps/messages/<lang>.yml
+# Available by default: en, es, pt, ja, ru
+# You can create custom language files — copy any existing .yml and translate it.
+# Change language in-game: /xsetwarp locate <language>
+# ------------------------------------------------------------------------------
+language: pt
+
+# ------------------------------------------------------------------------------
+# PREFIX
+# Applied to all chat messages. Supports & color codes and &# hex colors.
+# Example: "&8[&bX-SetWarps&8] &7"  →  [X-SetWarps] 
+# ------------------------------------------------------------------------------
+prefix: "&8[&bX-SetWarps&8] &7"
+
+# ------------------------------------------------------------------------------
+# UPDATE CHECKER
+# Checks the SpigotMC API for new versions on startup.
+# ------------------------------------------------------------------------------
+updates:
+  # Check for updates when the server starts?
+  check: true
+  # Notify admins (players with xsetwarps.admin) on join if an update exists?
+  notify-on-join: true
+
+# ------------------------------------------------------------------------------
+# DEBUG
+# Enables additional logging for troubleshooting. Leave off unless asked by staff.
+# ------------------------------------------------------------------------------
+debug: false
+
+# ------------------------------------------------------------------------------
+# METRICS (bStats)
+# Sends anonymous usage statistics to bStats.org to help improve the plugin.
+# Data collected: server version, online players, plugin version, warp count,
+# selected language, and a few config toggle values.
+# NO personal data, server IP, or sensitive information is ever collected.
+# You can safely disable this without losing any plugin functionality.
+# ------------------------------------------------------------------------------
+metrics: true
+
+# DO NOT CHANGE THIS VALUE — used internally for config version tracking.
+code: 1
+
+# ------------------------------------------------------------------------------
+# COMMANDS
+# General command behavior settings.
+# ------------------------------------------------------------------------------
+commands:
+  # Display the full help menu when a command is used without arguments?
+  # If false, only a brief usage message is shown.
+  help-message: true
+
+# ==============================================================================
+# WARP SETTINGS
+# These control how warps are created, stored, and permission-gated.
+# ==============================================================================
+warps:
+  # Maximum number of warps allowed on the server.
+  # -1 = unlimited warps.
+  # Players with 'xsetwarps.bypass-limit' can exceed this.
+  max-warps: -1
+
+  # Enable per-warp permissions?
+  # When true, each warp requires its own permission node: xsetwarps.warp.<name>
+  # When false, any player with 'xsetwarps.warp' can use warps that have no
+  # custom permission set.
+  #
+  # NOTE: This setting does NOT affect warps that have a custom 'permission'
+  # field defined in their warps.yml — those are ALWAYS protected by their
+  # specific permission, regardless of this toggle.
+  per-warp-permission: false
+
+  # What happens when a warp has NO custom permission set (permission: '')?
+  # true  = PUBLIC  — anyone with 'xsetwarps.warp' can teleport to it.
+  # false = PRIVATE — players also need 'xsetwarps.warp.<name>' or 'xsetwarps.warp.*'
+  empty-permission-public: true
+
+# ==============================================================================
+# TELEPORT SETTINGS
+# Control cooldowns, delays, movement cancellation, and effects for warps.
+# ==============================================================================
+teleport:
+  # ------------------------------------------------------------------------------
+  # PER-WARP COOLDOWN (default)
+  # Global default cooldown in seconds between uses of the SAME warp.
+  # Each warp can override this with its own cooldown value (see below).
+  #   - warp cooldown = -1  →  uses THIS value (global default)
+  #   - warp cooldown = 0   →  no cooldown for that specific warp
+  #   - warp cooldown = 10  →  10s cooldown for that specific warp
+  # 
+  # Set individual warp cooldowns in-game:
+  #   /xsetwarp setwarpcooldown <warp> <seconds>
+  #   /xsetwarp setwarpcooldown <warp> default    ← reset to this global value
+  # 
+  # Players with 'xsetwarps.bypass.cooldown' ignore all cooldowns.
+  # ------------------------------------------------------------------------------
+  cooldown: 0
+
+  # ------------------------------------------------------------------------------
+  # GLOBAL COOLDOWN
+  # Cooldown in seconds between ANY warp teleport (applies to ALL warps).
+  # This is checked IN ADDITION to the per-warp cooldown above.
+  # Example: global-cooldown: 30 → after warping anywhere, player must wait 30s
+  # before warping again, regardless of which warp they try to use.
+  # Set to 0 to disable.
+  # ------------------------------------------------------------------------------
+  global-cooldown: 0
+
+  # ------------------------------------------------------------------------------
+  # TELEPORT DELAY
+  # Seconds to wait before the teleport actually executes.
+  # The player must stay still during the delay (see cancel-on-move below).
+  # Set to 0 for instant teleportation.
+  # ------------------------------------------------------------------------------
+  delay: 0
+
+  # Cancel the teleport if the player moves during the delay?
+  cancel-on-move: true
+
+  # How far (in blocks) the player can move before the teleport is cancelled.
+  # 0.5 = slightly tolerant (allows small client-side movement / head rotation)
+  # 0.1 = very strict (even tiny movements cancel the teleport)
+  # 2.0 = lenient (player can walk around a bit)
+  move-tolerance: 0.5
+
+  # ------------------------------------------------------------------------------
+  # TELEPORT EFFECTS
+  # Sound effects played when teleporting to/from a warp.
+  # ------------------------------------------------------------------------------
+  effects:
+    # Master toggle for all teleport effects.
+    enabled: true
+
+    sound:
+      # Play a sound on teleport?
+      enabled: true
+
+      # Sound name — uses XSound for cross-version compatibility.
+      # Valid names depend on your server version:
+      #   1.13+:   ENTITY_ENDERMAN_TELEPORT, ENTITY_PLAYER_LEVELUP, BLOCK_PORTAL_TRAVEL
+      #   1.8.8:   ENDERMAN_TELEPORT, LEVEL_UP, PORTAL_TRAVEL
+      # The plugin will attempt to match the closest valid sound automatically.
+      name: "ENTITY_ENDERMAN_TELEPORT"
+
+      # Volume (0.0 to 1.0+). Higher values can be heard from further away.
+      volume: 1.0
+
+      # Pitch (0.0 to 2.0). 1.0 = normal, 2.0 = one octave higher.
+      pitch: 1.0
+
+# ==============================================================================
+# GUI SETTINGS
+# Control the graphical warp menu that opens with /warps or /warpgui.
+# Full GUI customization is available in gui.yml (colors, items, layout, etc.)
+# ==============================================================================
+gui:
+  # Enable the GUI? If false, /warps will show a text list instead.
+  enabled: true

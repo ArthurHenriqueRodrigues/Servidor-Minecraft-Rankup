@@ -1,0 +1,92 @@
+# ==============================================================================
+#  __  __      ____       _  __        __                
+#  \ \/ /     / ___|  ___| |_\ \      / /_ _ _ __ _ __  ___ 
+#   \  /_____ \___ \ / _ \ __|\ \ /\ / / _` | '__| '_ \/ __|
+#   /  \_____|____) |  __/ |_  \ V  V / (_| | |  | |_) \__ \
+#  /_/\_\    |____/ \___|\__|  \_/\_/ \__,_|_|  | .__/|___/
+#                                                |_|         
+# ==============================================================================
+# X-SetWarps Файл сообщений v1.3 (Russian)
+# Поддерживает коды цветов (&a, &b, т.д.) и Hex цвета (&#RRGGBB)
+
+# Общие сообщения
+no-permission: "%prefix%&cУ вас нет прав на использование этой команды."
+only-players: "%prefix%&cЭту команду могут использовать только игроки."
+usage-setwarp: "%prefix%&cИспользование: /setwarp <имя> [id] [описание]"
+usage-warp: "%prefix%&cИспользование: /warp <имя>"
+usage-delwarp: "%prefix%&cИспользование: /delwarp <имя>"
+usage-warpinfo: "%prefix%&cИспользование: /warpinfo <имя>"
+
+# Сообщения варпов
+warp-set: "%prefix%&aВарп '&b%warp%&a' успешно создан!"
+warp-not-found: "%prefix%&cВарп '&b%warp%&c' не существует."
+warp-teleport: "%prefix%&aТелепортация на варп: &b%warp%"
+warp-deleted: "%prefix%&aВарп '&b%warp%&a' был удален."
+world-not-loaded: "%prefix%&cОшибка: Мир '&b%world%&c' не загружен."
+reload-success: "%prefix%&aКонфигурация и сообщения перезагружены!"
+
+# Сообщения списка варпов
+warp-cooldown: "%prefix%&cВы должны подождать &e%seconds%сек. &cперед повторным использованием &b%warp%&c."
+warp-delay: "%prefix%&eТелепортация на &b%warp% &eчерез &a%seconds% &eсекунд... Не двигайтесь."
+warp-delay-cancelled: "%prefix%&cТелепортация отменена из-за движения."
+warps-limit-reached: "%prefix%&cДостигнут максимальный лимит варпов (&e%limit%&c)."
+warps-list-empty: "%prefix%&cНет зарегистрированных варпов."
+warps-list-header: "&9&l--- Варпы (&b%count%&9) ---"
+warps-list-entry: "&7- &b%warp% &8(&7Мир: &f%world%&8) &7- &f%desc%"
+
+# Сообщения WarpInfo
+warpinfo-header: "&9&l--- Информация о варпе: &b%warp% ---"
+warpinfo-desc: "&7Описание: &f%desc%"
+warpinfo-world: "&7Мир: &f%world%"
+warpinfo-coords: "&7Координаты: &f%coords%"
+warpinfo-creator: "&7Создатель: &f%creator%"
+warpinfo-created: "&7Дата: &f%date%"
+
+# Сообщения проверки обновлений
+update-check: "%prefix%&eПроверка обновлений..."
+update-available: "%prefix%&eДоступна новая версия! &7(&c%current%&7 -> &a%latest%&7)"
+update-download: "&eСкачать: &b%url%"
+update-current: "%prefix%&aУ вас установлена последняя версия!"
+update-error: "%prefix%&cОшибка при проверке обновлений."
+version-info: "%prefix%&bX-SetWarps &av%version%"
+
+# Сообщения языка
+language-changed: "%prefix%&aЯзык изменен на: &b%language%"
+language-not-found: "%prefix%&cЯзык не найден. Доступные: %list%"
+language-list: "&aДоступные: &f%list%"
+
+# Сообщения помощи
+help-header: "&9&l--- Помощь X-SetWarps ---"
+help-reload: "&b/xsw reload &f- Перезагрузить конфиг"
+help-update: "&b/xsw update &f- Проверить обновления"
+help-version: "&b/xsw version &f- Показать версию"
+help-locate: "&b/xsw locate <lang> &f- Сменить язык"
+help-setwarp: "&b/setwarp <имя> [id] [desc] &f- Создать варп"
+help-warp: "&b/warp <имя> &f- Телепорт на варп"
+help-delwarp: "&b/delwarp <имя> &f- Удалить варп"
+help-warps: "&b/warps &f- Открыть меню варпов"
+help-warpinfo: "&b/warpinfo <имя> &f- Инфо о варпе"
+
+# Export/Import
+usage-export: "%prefix%&cИспользование: /xsetwarp export <файл> [идентификатор]"
+usage-import: "%prefix%&cИспользование: /xsetwarp import <file|essentials|cmi|all>"
+export-success: "%prefix%&aЭкспортировано &e%count% &aварпов в &b%file%"
+export-failed: "%prefix%&cОшибка экспорта варпов."
+import-success: "%prefix%&aИмпортировано &e%count% &aварпов!"
+import-file-not-found: "%prefix%&cФайл не найден: &b%file%"
+import-plugin-not-found: "%prefix%&cПлагин %plugin% не установлен."
+import-plugin-success: "%prefix%&aИмпортировано &e%count% &aварпов из %plugin%."
+
+warp-global-cooldown: "%prefix%&cПодождите &e%seconds%с. &cперед использованием любого варпа."
+
+usage-setwarpcooldown: "%prefix%&cИспользование: /xsetwarp setwarpcooldown <варп> <секунды|default>"
+setwarpcooldown-set: "%prefix%&aКулдаун варпа '&b%warp%&a' установлен на &e%seconds%с."
+setwarpcooldown-reset: "%prefix%&aКулдаун варпа '&b%warp%&a' сброшен на глобальное значение."
+setwarpcooldown-invalid: "%prefix%&cНеверное значение. Используйте число >= 0 или 'default'."
+
+help-export: "&b/xsw export <file> [id] &f- Экспорт варпов"
+help-import: "&b/xsw import <file|essentials|cmi|all> &f- Импорт варпов"
+help-setwarpcooldown: "&b/xsw setwarpcooldown <warp> <s> &f- Кулдаун варпа"
+
+import-all-no-plugins: "%prefix%&cСовместимые плагины варпов не найдены."
+import-all-result: "%prefix%&aИз %plugin%: импортировано &e%count% &aварпов."

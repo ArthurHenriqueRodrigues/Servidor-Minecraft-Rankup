@@ -1,0 +1,109 @@
+# ==============================================================================
+#  __  __      ____       _  __        __                
+#  \ \/ /     / ___|  ___| |_\ \      / /_ _ _ __ _ __  ___ 
+#   \  /_____ \___ \ / _ \ __|\ \ /\ / / _` | '__| '_ \/ __|
+#   /  \_____|____) |  __/ |_  \ V  V / (_| | |  | |_) \__ \
+#  /_/\_\    |____/ \___|\__|  \_/\_/ \__,_|_|  | .__/|___/
+#                                                |_|         
+# ==============================================================================
+# X-SetWarps Mensajes
+
+# General Messages
+no-permission: "%prefix%&cNo tienes permiso para usar este comando."
+only-players: "%prefix%&cEste comando solo puede ser usado por jugadores."
+usage-setwarp: "%prefix%&cUso: /setwarp <nombre> [identificador] [descripcion]"
+usage-warp: "%prefix%&cUso: /warp <nombre>"
+usage-delwarp: "%prefix%&cUso: /delwarp <nombre>"
+usage-warpinfo: "%prefix%&cUso: /warpinfo <nombre>"
+
+# Warp Messages
+warp-set: "%prefix%&aWarp '&b%warp%&a' creado correctamente!"
+warp-not-found: "%prefix%&cEl warp '&b%warp%&c' no existe."
+warp-teleport: "%prefix%&aTeletransportado al warp: &b%warp%"
+warp-deleted: "%prefix%&aEl warp '&b%warp%&a' ha sido eliminado."
+world-not-loaded: "%prefix%&cError: El mundo '&b%world%&c' no esta cargado."
+reload-success: "%prefix%&aConfiguracion y mensajes recargados!"
+
+# Warp List Messages
+warp-cooldown: "%prefix%&cDebes esperar &e%seconds%s &cpara usar &b%warp%&c."
+warp-delay: "%prefix%&eTeletransportando a &b%warp% &een &a%seconds% &esegundos... No te muevas."
+warp-delay-cancelled: "%prefix%&cTeletransporte cancelado por movimiento."
+warps-limit-reached: "%prefix%&cLimite maximo de warps alcanzado (&e%limit%&c)."
+warps-list-empty: "%prefix%&cNo hay warps registrados."
+warps-list-header: "&9&l--- Warps (&b%count%&9) ---"
+warps-list-entry: "&7- &b%warp% &8(&7Mundo: &f%world%&8) &7- &f%desc%"
+
+# WarpInfo Messages
+warpinfo-header: "&9&l--- Info del Warp: &b%warp% ---"
+warpinfo-desc: "&7Descripcion: &f%desc%"
+warpinfo-world: "&7Mundo: &f%world%"
+warpinfo-coords: "&7Coordenadas: &f%coords%"
+warpinfo-creator: "&7Creado por: &f%creator%"
+warpinfo-created: "&7Fecha: &f%date%"
+
+# Update Checker Messages
+update-check: "%prefix%&eBuscando actualizaciones..."
+update-available: "%prefix%&eNueva version disponible! &7(&c%current%&7 -> &a%latest%&7)"
+update-download: "%prefix%&eDescargar: &b%url%"
+update-current: "%prefix%&aTienes la ultima version!"
+update-error: "%prefix%&cError al buscar actualizaciones."
+version-info: "%prefix%&bVersion de X-SetWarps: &a%version%"
+
+# Language Messages
+language-changed: "%prefix%&aIdioma cambiado a: &b%language%"
+language-not-found: "%prefix%&cIdioma no encontrado. Disponibles: %list%"
+language-list: "&aIdiomas disponibles: &f%list%"
+
+# Help Messages
+help-header: "&9&l--- Ayuda X-SetWarps ---"
+help-reload: "&b/xsw reload &f- Recargar"
+help-update: "&b/xsw update &f- Buscar actualizaciones"
+help-version: "&b/xsw version &f- Mostrar version"
+help-locate: "&b/xsw locate <idioma> &f- Cambiar idioma"
+help-setwarp: "&b/setwarp <nombre> [id] [desc] &f- Crear warp"
+help-warp: "&b/warp <nombre> &f- Teletransportarse"
+help-delwarp: "&b/delwarp <nombre> &f- Eliminar warp"
+help-warps: "&b/warps &f- Ver warps o abrir GUI"
+help-warpinfo: "&b/warpinfo <nombre> &f- Info del warp"
+
+# Export/Import Messages
+usage-export: "%prefix%&cUso: /xsetwarp export <archivo> [identificador]"
+usage-import: "%prefix%&cUso: /xsetwarp import <archivo|essentials|cmi|all>"
+export-success: "%prefix%&aSe exportaron &e%count% &awarps a &b%file%"
+export-failed: "%prefix%&cError al exportar warps."
+import-success: "%prefix%&aSe importaron &e%count% &awarps exitosamente!"
+import-file-not-found: "%prefix%&cArchivo no encontrado: &b%file%"
+import-plugin-not-found: "%prefix%&cEl plugin %plugin% no esta instalado."
+import-plugin-success: "%prefix%&aSe importaron &e%count% &awarps de %plugin%."
+
+# Global Cooldown
+warp-global-cooldown: "%prefix%&cDebes esperar &e%seconds%s &cpara usar cualquier warp."
+
+# Per-Warp Cooldown (admin command)
+usage-setwarpcooldown: "%prefix%&cUso: /xsetwarp setwarpcooldown <warp> <segundos|default>"
+setwarpcooldown-set: "%prefix%&aCooldown del warp '&b%warp%&a' establecido a &e%seconds%s."
+setwarpcooldown-reset: "%prefix%&aCooldown del warp '&b%warp%&a' restablecido al valor global."
+setwarpcooldown-invalid: "%prefix%&cValor de cooldown invalido. Usa un numero >= 0 o 'default'."
+
+# Help additions
+help-export: "&b/xsw export <archivo> [id] &f- Exportar warps"
+help-import: "&b/xsw import <archivo|essentials|cmi|all> &f- Importar warps"
+help-setwarpcooldown: "&b/xsw setwarpcooldown <warp> <s> &f- Cooldown por warp"
+
+# Import All
+import-all-no-plugins: "%prefix%&cNo se encontraron plugins de warps compatibles en el servidor."
+import-all-result: "%prefix%&aDesde %plugin%: se importaron &e%count% &awarps."
+
+# Force Messages Command
+force-messages-usage: "&7Uso: &e/xsw forcemessages <new|keep> <all|idioma>"
+force-messages-current: "&7Idioma actual: &e%lang%"
+force-messages-success: "&aArchivo de mensajes '&e%file%&a' actualizado (claves faltantes anadidas) y recargado."
+force-messages-no-changes: "&7Archivo de mensajes '&e%file%&7' actualizado en disco, pero no es el idioma activo."
+force-messages-all: "&aSe actualizaron &e%count%&a archivo(s) de idioma con claves faltantes."
+force-messages-reset-success: "&aArchivo de mensajes '&e%file%&a' regenerado desde valores predeterminados y recargado."
+force-messages-reset-no-active: "&7Archivo de mensajes '&e%file%&7' regenerado desde valores predeterminados, pero no es el idioma activo."
+force-messages-reset-all: "&aSe regeneraron &e%count%&a archivo(s) de idioma desde valores predeterminados."
+force-messages-invalid-mode: "&cModo invalido. Usa &enew&c o &ekeep&c."
+
+# Help additions (forcemessages)
+help-forcemessages: "&b/xsw forcemessages <new|keep> <all|idioma> &f- Forzar actualizacion de mensajes"
