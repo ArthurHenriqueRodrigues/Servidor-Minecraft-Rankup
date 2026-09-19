@@ -33,6 +33,7 @@ Este repositorio guarda configuracoes, scripts e documentacao. Mundos, logs, JAR
 
 - `RANKS.yml`: tabela de ranks e minas.
 - `ECONOMIA.yml`: tabela economica.
+- `warps.yml`: Sistema de Warps
 - `TAB-CONFIG.yml`: layout do TAB e scoreboard.
 - `CONFIGURAR-CARGOS.txt`: grupos LuckPerms.
 - `CRIAR-MINAS.txt`: comandos MineResetLite.
